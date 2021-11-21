@@ -9,8 +9,22 @@ module.exports = (app) => {
     const updateCurrentProfile = (req, res) => {
       //  console.log("asdas"+req.profile.name)
 
-        const p = req.body;
-            profile['firstName'] = "Asda"
+        console.log("req N "+req.body.name)
+        console.log("req L "+req.body.location)
+
+        console.log("pro fn " + profile['firstName'] )
+
+        profile['firstName'] = req.body.name
+        profile['bio'] = req.body.bio
+        profile['dateOfBirth'] = req.body.dateOfBirth
+        profile['location'] = req.body.location
+        profile['website'] = req.body.website
+
+        console.log("pro fn " + profile['firstName'] )
+
+        console.log("req N "+req.body.name)
+        console.log("req L "+req.body.location)
+
 
         return {
 
@@ -19,7 +33,7 @@ module.exports = (app) => {
         };
         res.sendStatus(200);
     }
-    app.put('/api/profile/:firstName/update', updateCurrentProfile);
+    app.put('/api/profile', updateCurrentProfile);
 
     app.get('/api/profile', getCurrentProfile);
 };
