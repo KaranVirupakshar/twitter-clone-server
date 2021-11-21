@@ -14,11 +14,14 @@ module.exports = (app) => {
 
         console.log("pro fn " + profile['firstName'] )
 
+        /*
         profile['firstName'] = req.body.name
         profile['bio'] = req.body.bio
         profile['dateOfBirth'] = req.body.dateOfBirth
         profile['location'] = req.body.location
         profile['website'] = req.body.website
+
+         */
 
         console.log("pro fn " + profile['firstName'] )
 
