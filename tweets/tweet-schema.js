@@ -5,6 +5,7 @@ const schema = mongoose.Schema({
     userName: String,
     verified: {type: Boolean, defaultValue: false},
     handle: String,
+    liked: {type: Boolean, defaultValue: false},
     title: String,
     tweet: String,
     attachments: {
