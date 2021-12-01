@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+const schema = mongoose.Schema({
+    firstName: String,
+    handle: String,
+    profilePicture: String,
+    bannerPicture: String,
+    bio: String,
+    website: String,
+    location: String,
+    dateOfBirth: String,
+    dateJoined: String,
+    followingCount: String,
+    followersCount: String
+}, {collection: "profile"});
+module.exports = schema;

@@ -21,10 +21,6 @@ module.exports = (app) => {
     app.post("/rest/tweets", createTweets);
 
     const updateTweets = (req, res) => {
-
-        console.log(req.params.id)
-        console.log(req.body)
-
         if (req.body.liked === true) {
             req.body.liked = false;
             req.body.stats.likes--;
